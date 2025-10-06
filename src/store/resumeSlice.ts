@@ -1,25 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Resume, PersonalInfo, Education, Experience, Skill, Project } from '../types/resume';
+import { defaultResumeData } from '../data/defaultResume';
 
-const initialState: Resume = {
-  personalInfo: {
-    fullName: '',
-    email: '',
-    phone: '',
-    location: '',
-    title: '',
-    summary: '',
-    linkedin: '',
-    github: '',
-    website: '',
-  },
-  education: [],
-  experience: [],
-  skills: [],
-  projects: [],
-  template: 'modern',
-  color: '#3B82F6',
-};
+const initialState: Resume = defaultResumeData;
 
 const resumeSlice = createSlice({
   name: 'resume',
